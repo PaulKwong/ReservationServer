@@ -69,5 +69,3 @@ appveyor => travis => Azure Pipeline
 ## Contact
 
 Contact me if you need: <paulkwong622@gmail.com>
-
-# OpenReservation [![Build Status](https://weihanli.visualstudio.com/Pipelines/_apis/build/status/OpenReservation.ReservationServer?branchName=dev)](https://weihanli.visualstudio.com/Pipelines/_build /latest?definitionId=7&branchName=dev)
