@@ -1,33 +1,30 @@
-# OpenReservation [![Build Status](https://weihanli.visualstudio.com/Pipelines/_apis/build/status/OpenReservation.ReservationServer?branchName=dev)](https://weihanli.visualstudio.com/Pipelines/_build/latest?definitionId=7&branchName=dev)
-
 ## Intro
+The reservation system was originally designed and developed because the school activity room reservation process hopes to change from the previous cumbersome and inefficient completely offline reservation
+It was modified to online reservation + offline stamp approval to reserve school activity rooms, which gradually evolved.
 
-预约系统，起初的设计和开发是因为学校活动室预约流程希望从之前繁琐低效的完全线下预约
-修改为线上预约+线下盖章审批的方式来预约学校的活动室，由此逐步演化而来。
+Currently developed with ASP.NET Core, deployed on Kubernetes
 
-目前使用 ASP.NET Core 开发, 部署在 Kubernetes 上
+- Demo address: <https://reservation.weihanli.xyz>
+- New version reservation client demo address: <https://reservation-client.weihanli.xyz> (angular + material SPA)
+- REST API Swagger: <https://reservation.weihanli.xyz/swagger>
 
-- 演示地址：<https://reservation.weihanli.xyz>
-- 新版预约客户端演示地址：<https://reservation-client.weihanli.xyz>  (angular + material SPA)
-- REST API Swagger：<https://reservation.weihanli.xyz/swagger>
+- Background login address: <https://reservation.weihanli.xyz/Admin/>
 
-- 后台登录地址： <https://reservation.weihanli.xyz/Admin/>
+   Background login account:
 
-  后台登录账号：
+   Administrator username: admin Password: Admin@888
 
-  管理员用户名: admin 密码: Admin@888
+   Ordinary user: Alice Password: Test@1234
 
-  普通用户： Alice 密码：Test@1234
+   Administrators have more permissions, can set more system-related configurations, and can also add general system administrators
 
-  管理员有更多的权限，可以设置更多系统相关的配置，也可以增加系统普通管理员
+## About technology
 
-## 关于技术
-
-使用的技术演化：
+Evolution of technology used:
 
 ASP.NET WebForm => ASP.NET MVC => ASP.NET Core
 
-部署方式：
+Deployment method:
 
 IIS => `Docker`+`nginx` => `kubernetes`+`nginx`
 
@@ -35,41 +32,42 @@ CI/CD:
 
 appveyor => travis => Azure Pipeline
 
-[部署文档](./docs/README.md)
+[Deployment Documentation](./docs/README.md)
 
 ## Roadmap
 
 ### 1.0
 
-- [x] 活动室预约
-- [x] 预约管理
-- [x] 活动室管理
-- [x] 公告管理
-- [x] 用户管理
-- [x] 预约黑名单管理
-- [x] 系统设置管理
-- [x] 某段时间段禁用预约，如节假日/寒（暑）假等
+- [x] Event Room Reservations
+- [x] Appointment Management
+- [x] Event room management
+- [x] Announcement management
+- [x] User Management
+- [x] Reservation blacklist management
+- [x] System settings management
+- [x] Appointments are disabled for a certain period of time, such as holidays/cold (summer) vacations, etc.
 
 ### 2.0
 
-- [x] 活动室预约 SPA <https://github.com/OpenReservation/ReservationServer/tree/dev/OpenReservation.Clients/ReservationClient>（angular8 + material)
-- [x] 微信小程序预约 <https://github.com/OpenReservation/ReservationServer/tree/dev/OpenReservation.Clients/WxAppClient>
-- [x] 从单机到集群，详细修改参考：<https://www.cnblogs.com/weihanli/p/aspnetcore-migrate-standalone-to-cluster.html>
+- [x] Event Room Reservation SPA <https://github.com/OpenReservation/ReservationServer/tree/dev/OpenReservation.Clients/ReservationClient> (angular8 + material)
+- [x] WeChat Mini Program Reservation <https://github.com/OpenReservation/ReservationServer/tree/dev/OpenReservation.Clients/WxAppClient>
+- [x] From stand-alone to cluster, detailed modification reference: <https://www.cnblogs.com/weihanli/p/aspnetcore-migrate-standalone-to-cluster.html>
 
 ### 3.0
 
-- [x] 多语言支持
-- [x] 用户系统（需要登录才能预约，登录支持 Github 登录）
-- [x] 我的预约记录
-- [x] 取消预约
+- [x] Multilingual support
+- [x] user system (requires login to make an appointment, login supports Github login)
+- [x] My Appointment Records
+- [x] cancel appointment
 
 ### 4.0
 
-- [ ] 更通用的预约流程
-- [ ] 增加组织的概念，多租户
-- [ ] ReservationService as a Service，打造 Saas 预约服务平台
+- [ ] A more general booking process
+- [ ] Add the concept of organization, multi-tenancy
+- [ ] ReservationService as a Service, creating a Saas reservation service platform
 
 ## Contact
 
-Contact me if you need: <weihanli@outlook.com>
+Contact me if you need: <paulkwong622@gmail.com>
 
+# OpenReservation [![Build Status](https://weihanli.visualstudio.com/Pipelines/_apis/build/status/OpenReservation.ReservationServer?branchName=dev)](https://weihanli.visualstudio.com/Pipelines/_build /latest?definitionId=7&branchName=dev)
